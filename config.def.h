@@ -11,12 +11,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Fira Mono:size=10" };
 static const char dmenufont[]       = "Fira Mono:size=10";
-static char normbordercolor[] = "#444444";
-static char normbgcolor[]     = "#222222";
-static char normfgcolor[]     = "#bbbbbb";
-static char selbordercolor[]  = "#005577";
-static char selbgcolor[]      = "#005577";
-static char selfgcolor[]      = "#eeeeee";
+static const char normbgcolor[]     = "#88927E";
+static const char normfgcolor[]     = "#ffffff";
+static const char normbordercolor[] = "#88927E";
+static const char selbgcolor[]      = "#DB7464";
+static const char selfgcolor[]      = "#ffffff";
+static const char selbordercolor[]  = "#DB7464";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
