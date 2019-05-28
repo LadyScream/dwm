@@ -11,8 +11,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Fira Mono:size=10" };
 static const char dmenufont[]       = "Fira Mono:size=10";
-static const char col_gray1[]       = "#88927E";
-static const char col_gray2[]       = "#88927E";
+static const char col_gray1[]       = "#000000";
+static const char col_gray2[]       = "#000000";
 static const char col_gray3[]       = "#ffffff";
 static const char col_gray4[]       = "#ffffff";
 static const char col_cyan[]        = "#DB7464";
