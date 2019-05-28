@@ -420,6 +420,7 @@ buttonpress(XEvent *e)
 
 	click = ClkRootWin;
 	/* focus monitor if necessary */
+	Bool focusonwheel = False;
 	if ((m = wintomon(ev->window)) && m != selmon
 	    && (focusonwheel || (ev->button != Button4 && ev->button != Button5))) {
 		unfocus(selmon->sel, 1);
