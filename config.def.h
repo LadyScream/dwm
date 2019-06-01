@@ -61,10 +61,10 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /*static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };*/
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-dim", "0.2", "-b", "-q", "-i", "-p", "Run:", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-dim", "0.5", "-b", "-q", "-i", "-p", "Run:", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = { "chromium", NULL };
-static const char *passmenu[] = { "passmenu", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-dim", "0.2", "-b", "-i", NULL };
+static const char *passmenu[] = { "passmenu", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-dim", "0.5", "-b", "-i", NULL };
 static const char *nnn[] = { "st", "-e", "nnn", "-l", NULL };
 
 static Key keys[] = {
