@@ -32,6 +32,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
+	{ "Thunderbird",     NULL,       NULL,       1 << 8,            False,           -1 },
 	{ NULL,     NULL,       NULL,       0,            False,           -1 },
 };
 
