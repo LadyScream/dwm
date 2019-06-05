@@ -65,6 +65,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = { "chromium", NULL };
 static const char *passmenu[] = { "passmenu", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-dim", "0.5", "-b", "-i", NULL };
+static const char *dmenu_power[] = { "dmenu_power", NULL };
 static const char *nnn[] = { "st", "-e", "nnn", "-l", NULL };
 
 static Key keys[] = {
@@ -104,7 +105,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,           {.v = dmenu_power} },
  	{ MODKEY|ControlMask|ShiftMask, XK_e,      quit,           {1} }, 
 };
 
