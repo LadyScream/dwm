@@ -64,7 +64,7 @@ static const char *browser[]  = { "chromium", NULL };
 static const char *passmenu[] = { "passmenu", "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, "-dim", "0.5", "-b", "-i", NULL };
 static const char *dmenu_power[] = { "dmenu_power", NULL };
 static const char *nnn[] = { "st", "-e", "nnn", "-l", NULL };
-static const char *vifm[] = { "st", "-e", "vifm", NULL };
+static const char *vifm[] = { "st", "-e", "vifmrun", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
