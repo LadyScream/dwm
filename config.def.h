@@ -65,6 +65,7 @@ static const char *passmenu[] = { "passmenu", "-fn", dmenufont, "-nb", norm_bg, 
 static const char *dmenu_power[] = { "dmenu_power", NULL };
 static const char *nnn[] = { "st", "-e", "nnn", "-l", NULL };
 static const char *vifm[] = { "st", "-e", "vifmrun", NULL };
+static const char *betterlockscreen[] = { "betterlockscreen", "-l", "blur", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -74,6 +75,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      spawn,          {.v = browser } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = passmenu } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = vifm } },
+	{ MODKEY,                       XK_x,      spawn,          {.v = betterlockscreen } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
