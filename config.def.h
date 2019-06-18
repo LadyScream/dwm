@@ -10,8 +10,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Fira Mono:size=10", "Siji:size=10" };
-static const char dmenufont[]       = "Fira Mono:size=10";
+static const char *fonts[]          = { "Fira Mono:size=11", "mononoki Nerd Font:size=11:antialias=false:autohint=true", "Siji:size=11" };
+static const char dmenufont[]       = "Fira Mono:size=11";
 #include "/home/ladyscream/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
