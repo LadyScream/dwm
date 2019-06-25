@@ -58,24 +58,26 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /*static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };*/
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, "-dim", "0.5", "-b", "-q", "-i", "-p", "Run:", NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *browser[]  = { "chromium", NULL };
-static const char *passmenu[] = { "passmenu", "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, "-dim", "0.5", "-b", "-i", NULL };
-static const char *dmenu_power[] = { "dmenu_power", NULL };
-static const char *nnn[] = { "st", "-e", "nnn", "-l", NULL };
-static const char *vifm[] = { "st", "-e", "vifmrun", NULL };
 static const char *betterlockscreen[] = { "betterlockscreen", "-l", "blur", NULL };
+static const char *browser[]  = { "chromium", NULL };
+static const char *dmenu_power[] = { "dmenu_power", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, "-dim", "0.5", "-b", "-q", "-i", "-p", "Run:", NULL };
+static const char *nnn[] = { "st", "-e", "nnn", "-l", NULL };
+static const char *notes[] = { "notes", NULL };
+static const char *passmenu[] = { "passmenu", "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, "-dim", "0.5", "-b", "-i", NULL };
+static const char *termcmd[]  = { "st", NULL };
+static const char *vifm[] = { "st", "-e", "vifmrun", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	/*{ MODKEY,                       XK_b,    togglebar,      {0} },*/
 	{ MODKEY,                       XK_b,      spawn,          {.v = browser } },
-	{ MODKEY,                       XK_p,      spawn,          {.v = passmenu } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = vifm } },
+	{ MODKEY,                       XK_n,      spawn,          {.v = notes } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = passmenu } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = betterlockscreen } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
