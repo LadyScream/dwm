@@ -10,9 +10,9 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Fira Mono:size=11", "mononoki Nerd Font Mono:size=16:antialias=false:autohint=true", "Siji:size=11" };
-static const char dmenufont[]       = "Fira Mono:size=11";
-#include "/home/ladyscream/.cache/wal/colors-wal-dwm.h"
+static const char *fonts[]          = { "Hack Nerd Font:size=11", "mononoki Nerd Font Mono:size=16:antialias=false:autohint=true", "Siji:size=11" };
+static const char dmenufont[]       = "Hack Nerd Font Mono:size=11";
+#include "/home/marea/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -59,20 +59,19 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /*static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };*/
 static const char *betterlockscreen[] = { "betterlockscreen", "-l", "blur", NULL };
-static const char *browser[]  = { "chromium", NULL };
+static const char *browser[]  = { "qutebrowser", NULL };
 static const char *dmenu_power[] = { "dmenu_power", NULL };
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, "-dim", "0.5", "-b", "-q", "-i", "-p", "Run:", NULL };
-static const char *nnn[] = { "st", "-e", "nnn", "-l", NULL };
+static const char *file_explorer[] = { "st", "-e", "nnn", "-l", NULL };
 static const char *notes[] = { "notes", NULL };
 static const char *passmenu[] = { "passmenu", "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, "-dim", "0.5", "-b", "-i", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *vifm[] = { "st", "-e", "vifmrun", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	/*{ MODKEY,                       XK_b,    togglebar,      {0} },*/
 	{ MODKEY,                       XK_b,      spawn,          {.v = browser } },
-	{ MODKEY,                       XK_e,      spawn,          {.v = vifm } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = file_explorer } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = notes } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = passmenu } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
